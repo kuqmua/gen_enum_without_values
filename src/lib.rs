@@ -25,7 +25,7 @@ pub fn derive_gen_enum_without_values(input: TokenStream) -> TokenStream {
     };
     let enum_ident = syn::Ident::new(&format!("{}EnumWithoutValues", ident), ident.span());
     let gen = quote! {
-         #[derive(Debug, strum_macros::Display, EnumIter, EnumExtenstion)]
+         #[derive(Debug, strum_macros::Display, EnumIter, EnumExtension)]
         pub enum #enum_ident {
             #(#generated)*
         }
