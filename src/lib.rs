@@ -8,6 +8,7 @@
 
 #[proc_macro_derive(GenEnumWithoutValues)]
 pub fn derive_gen_enum_without_values(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
+    proc_macro_helpers::panic_location::panic_location("GenEnumWithoutValues");
     use convert_case::Case;
     use convert_case::Casing;
     let ast: syn::DeriveInput =
